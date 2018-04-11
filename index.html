@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="vendor/reveal.css">
+  <link rel="stylesheet" href="vendor/theme.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1 style="line-height:.6em;">
+          Security
+          <br>
+          <small>+</small>
+          <br> Privacy
+          <br>
+          <small>+</small>
+          <br> Encryption
+        </h1>
+      </section>
+      <section data-background-video="spy.mp4" data-background-video-loop="true" />
+      </section>
+      <section>
+        <h3>Outline</h3>
+        <ul>
+          <li>Privacy, Security, and why it matters</li>
+          <li>What Is Encryption?</li>
+          <li>Assessing your risk (threat modeling)</li>
+          <li>Best practices</li>
+          <li>(Maybe?) GDPR</li>
+        </ul>
+      </section>
+      <section>
+        <section>
+          <h2>
+            Why care about privacy and security?
+          </h2>
+        </section>
+        <section>
+          <h3>Your data has immense value</h3>
+          <p> We work in a startup that leverages AI. We should understand the value of our data before giving it away.</p>
+        </section>
+        <section>
+          <h3>The future is long and full of surprises</h3>
+          <p>
+            What's mundane today might be scandelous tomorrow, or if lacking context. Don't let your information be weaponized against
+            future you.
+          </p>
+        </section>
+        <section>
+          <h3>You do have something to hide.</h3>
+          <blockquote>
+            I know what you do in the bathroom, but you still close the door. That’s because you want privacy, not secrecy.
+          </blockquote>
+          <a href="https://medium.com/@FabioAEsteves/i-have-nothing-to-hide-why-should-i-care-about-my-privacy-f488281b8f1d">
+            Fabio Esteves
+          </a>
+        </section>
+        <section>
+          <h3>
+            At work, it's your job
+          </h3>
+          <p>If your personal data has value, so does your company data.</p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>Crafts Time!</h1>
+        </section>
+        <section data-background-video="paint.mp4" data-background-video-loop="true" />
+        <div style="background-color: #fff; display: inline-block">
+          <h3 style="color: #222">Let's send a
+            <br/> ~ secret message ~</h3>
+        </div>
+      </section>
+      <section>
+        <img src="public-key.svg">
+      </section>
+      <section>
+        <h3>How secure is it?</h3>
+        <p>
+          As of 2012, it would take about<br>
+          <strong>
+            331,000,000,000,000,000,000,000,<br>000,000,000,000,000,000,<br>000,000,000,000,000<Br>
+          </strong>
+          years to crack.
+          <br><a href="https://www.eetimes.com/document.asp?doc_id=1279619">How secure is AES against brute force attacks?</a>
+        </p>
+      </section>
+      </section>
+      <section>
+        <section>
+          <h2>Thinking about security</h2>
+        </section>
+        <section>
+          <p>How to assess risks, or
+            <strong>threat model</strong>
+          </p>
+        </section>
+        <section>
+            <img src="threat-diagram.png" style="border:0; box-shadow:none; background:none;">
+          <!-- <ol>
+            <li>What do I want to protect?</li>
+            <li>Who do I want to protect it from?</li>
+            <li>How bad are the consequences if I fail?</li>
+            <li>How likely is it that I will need to protect it?</li>
+            <li>How much trouble am I willing to go through to try to prevent potential consequences?</li>
+          </ol> --><Br>
+          <a href="https://ssd.eff.org/en/module/assessing-your-risks">-EFF</a>
+        </section>
+        <section data-background-color="#3D3D3E">
+          <img src="threat.png" style="border:0; box-shadow:none;">
+          <br>
+          <a href="https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/">Ars Technica</A>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>
+            Best practices
+          </h1>
+        </section>
+        <section data-background-color="#ED969E">
+          <h3>Two factor authentication</h3>
+          <img style="border:0; box-shadow:none;" src="phone.gif" width="20%">
+          <h4>Password + Code > Password</h4>
+          <ul>
+            <li>
+              <a style="color:#222;" href="https://myaccount.google.com/u/1/security-checkup">Google 2Fa</a>
+            </li>
+            <li>
+              <a style="color:#222;" href="https://www.turnon2fa.com/">Tutorials for other sites</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Passwords!</h3>
+          <ul>
+            <li>Best: Password manager (Lastpass is good) with
+              <strong>randomly generated password</strong>
+            </li>
+            <li>Acceptable: Formulaic passwords</li>
+            <li>Don't ever use the same password, obviously</li>
+            <li>
+              <a href="https://haveibeenpwned.com/">Have I been pwned?</a>
+            </li>
+          </ul>
+        </section>
+        <section data-background-color="#3B5998">
+          <h3>Review your SSO Apps</h3>
+          <img src="screenshot.png">
+        </section>
+        <section>
+          <h3>Review your phone permissions</h3>
+          <ul>
+            <li>iOS: Settings → Privacy</li>
+            <li>Android: Settings → Apps & Notifications → App permissions</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Using encryption</h3>
+          <ul>
+            <li>Only transmit passwords or visit most sites via HTTPS</li>
+            <li>Use Telegram, WhatsApp, or Signal for messaging</li>
+            <li>Email: A bit trickier. Within gmail it's encrypted, but not e2e. PGP extensions are available for Gmail. </li>
+          </ul>
+        </section>
+        <section>
+          <h3>
+            <strong>ALWAYS</strong> use an ad blocker</h3>
+          uBlock Origin is the best, imo.
+        </section>
+        <section>
+          <h3>Be skeptical!</h3>
+          Phishing and spear phishing are serious threats, it's not always obvious.
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>GDPR - General Data Protection Regulation</h2>
+        </section>
+        <section>
+          <h3>What it means for citizens</h3>
+          <ul>
+            <li>
+              easier access to their data
+            </li>
+            <li>
+              a new right to data portability
+            </li>
+            <li>right to erasure (‘right to be forgotten’)
+            </li>
+            <li>
+              right to know when their personal data has been hacked
+            </li>
+          </ul>
+          <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=LEGISSUM:310401_2&from=EN&isLegissum=true">Summary of EU-2016/679</a>
+        </section>
+        <section>
+          <h3>What it means for businesses</h3>
+          <ul>
+            <li>
+              a single set of EU-wide rules
+            </li>
+            <li>
+              a data protection officer,
+            </li>
+            <li>one-stop-shop
+            </li>
+            <li>EU rules for non-EU com panies
+            </li>
+            <li>innovation-friendly rules
+            </li>
+            <li><strong>privacy by design</strong>
+            </li>
+            <li>
+              removal of notifications
+            </li>
+            <li>
+              impact assessments
+            </li>
+            <li>record-keeping
+            </li>
+          </ul>
+          <p>
+            <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=LEGISSUM:310401_2&from=EN&isLegissum=true">Summary of EU-2016/679</a>
+          </p>
+        </section>
+        <section>
+            <h2>Privacy By Design</h2>
+            <p>
+              A value sensitive design approach that takes privacy into account throughout the entire engineering process.
+            </p>
+        </section>
+        <section>
+          <h3>The ~ seven principles ~</h3>
+          <ol>
+              <li>Proactive not reactive: preventative not remedial</li>
+              <li>Privacy as the default setting</li>
+              <li>Privacy embedded into design</li>
+              <li>Full functionality: positive-sum, not zero-sum</li>
+              <li>End-to-end security: full lifecycle protection</li>
+              <li>Visibility and transparency: keep it open</li>
+              <li>Respect for user privacy: keep it user-centric</li>
+          </ol>
+          <p><a href="https://www.ryerson.ca/pbdce/certification/seven-foundational-principles-of-privacy-by-design/">Ryerson Privacy by Design Centre of Excellence</a></p>
+        </section>
+      </section>
+    </div>
+  </div>
+  <script src="vendor/reveal.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
+
+</html>
